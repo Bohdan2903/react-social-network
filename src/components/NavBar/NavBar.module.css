@@ -1,0 +1,19 @@
+.nav{
+  grid-area: n;
+  background-color: red;
+  padding: 20px;
+}
+.item a{
+  color:white;
+  text-decoration: none;
+}
+.friendsBlock{
+  display: flex;
+}
+.item a.active{
+  color:gold;
+}
+.friend img{
+  width: 30px;
+  height: 30px;
+}

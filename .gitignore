@@ -1,0 +1,10 @@
+/node_modules
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/typescript-react.iml
+.idea/vcs.xml
+README.md
+node_modules/
+
