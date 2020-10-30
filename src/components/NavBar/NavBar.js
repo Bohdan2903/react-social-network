@@ -1,11 +1,11 @@
 import React from "react";
 import s from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
+
 const NavBar = (props) => {
   let friend = props.state.friend.map(f => <div key={f.id} className={s.friend}> {f.name} <img src={f.img} alt='img' />  </div>);
-  console.log(friend);
+
   return (
-    
     <nav className={s.nav}>
       <div className={`${s.item} ${s.active}`}>
         <NavLink to="/Profile" activeClassName ={s.active}>Profile</NavLink>
