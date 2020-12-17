@@ -21,7 +21,7 @@ let initialState = {
     newMessageBody: '',
 };
 const dialogsReducer = (state = initialState, action) => {
-    console.log(action.type, '11')
+
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY: {
             return {
