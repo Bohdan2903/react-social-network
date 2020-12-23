@@ -14,7 +14,7 @@ let Users = (props) => {
         <div>
             {pages.map(index => {
                 return(
-                    <button className={props.currentPage === index && s.selectedPage} onClick={(e)=>{props.onPageChanged(index)}}>{index}</button>
+                    <button className={props.currentPage === index ? s.selectedPage : ''} onClick={(e)=>{props.onPageChanged(index)}}>{index}</button>
                 )
             })}
         </div>
@@ -24,7 +24,7 @@ let Users = (props) => {
                     <span>
                         <div>
                             <NavLink to={'/profile/' + user.id}>
-                                <img src={user.photos.small !== null ? user.photos.small : userPhoto } className={s.userPhoto}/>
+                                <img src={user.photos.small !== null ? user.photos.small : userPhoto } className={s.userPhoto} alt='userphoto'/>
                             </NavLink>
                         </div>
                         <div>

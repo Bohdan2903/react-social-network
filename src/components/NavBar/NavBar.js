@@ -1,6 +1,19 @@
 import React from "react";
 import s from "./NavBar.module.css";
 import {NavLink} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faUserAlt,
+    faEnvelope,
+    faUsers,
+    faRss,
+    faMusic,
+    faCog
+
+
+
+
+} from "@fortawesome/free-solid-svg-icons";
 
 
 const NavBar = () => {
@@ -19,22 +32,30 @@ const NavBar = () => {
     return (
         <nav className={s.nav}>
             <div className={`${s.item} ${s.active}`}>
-                <NavLink to="/Profile" activeClassName={s.active}>Profile</NavLink>
+                <NavLink to="/Profile" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faUserAlt} />Profile
+                </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Dialogs" activeClassName={s.active}>Messages</NavLink>
+                <NavLink to="/Dialogs" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faEnvelope} /> Messages
+                </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Users" activeClassName={s.active}>Users</NavLink>
+                <NavLink to="/Users" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faUsers} /> Users</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/News" activeClassName={s.active}>News</NavLink>
+                <NavLink to="/News" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faRss} /> News</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Music" activeClassName={s.active}>Music</NavLink>
+                <NavLink to="/Music" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faMusic} /> Music</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Settings" activeClassName={s.active}>Settings</NavLink>
+                <NavLink to="/Settings" activeClassName={s.active}>
+                    <FontAwesomeIcon icon={faCog} /> Settings</NavLink>
             </div>
             <div className={s.item}>
                 <div className={s.friendsBlock}>

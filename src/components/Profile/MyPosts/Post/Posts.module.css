@@ -1,9 +1,22 @@
 
 .item{
-  color: orange
+  border: 1px solid #D7DBE1;
+  border-radius: 3px;
+  background: #FFFFFF;
+  margin-top: 10px
 }
-.item img{
+.itemHeader{
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+}
+.itemBody{
+  color: rgba(4, 18, 38, 0.61);
+  padding: 20px;
+}
+.itemHeader img{
   width: 50px;
+  margin-right: 10px;
   height: 50px;
   border-radius: 50%;
   -webkit-border-radius: 50%;

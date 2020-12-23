@@ -1,19 +1,42 @@
 .nav{
   grid-area: n;
-  background-color: red;
-  padding: 20px;
+  background-color: #f0f2f7;
+  padding: 20px 16px;
 }
 .item a{
-  color:white;
+  color: rgba(9, 22, 42, 0.8);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-weight: 400;
+  transition: 0.1s linear;
+}
+.item a svg{
+  margin-right: 14px;
+  width: 16px !important;
+  height: 16px !important;
+  text-align: center;
 }
 .friendsBlock{
   display: flex;
+  flex-direction: column;
 }
-.item a.active{
-  color:gold;
+.item a.active, a:hover{
+  transition: 0.1s linear;
+  font-weight: 600;
+  color:#041226;
+}
+.friend{
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+
 }
 .friend img{
   width: 30px;
   height: 30px;
+  margin-left: 20px
 }

@@ -3,8 +3,8 @@ import s from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 
 const ProfileInfo = (props) => {
+    console.log(props.profile)
     if(!props.profile) {
-        console.log('13123');
         return <Preloader isFetching='false'/>
     }
     return (
@@ -14,7 +14,13 @@ const ProfileInfo = (props) => {
                      alt="img"/>
             </div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.large} alt=""/>
+                <div className={s.descriptionBlockTitle}>
+                    <div>{props.profile.fullName}</div>
+                    <img src={props.profile.photos.large} className={s.avatarImg} alt=""/>
+                    {props.profile.lookingForAJob ? <div> Looking for work </div>: ''}
+                </div>
+
+                <div>{props.profile.aboutMe}</div>
             </div>
          </div>
     );
