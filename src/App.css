@@ -7,6 +7,11 @@ body,html{
   color: #041226;
   background: #f0f2f7;
 }
+a,button, input, a:hover,a:focus, button:hover, button:focus, input:hover, input:focus {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
 .app-wrapper {
   display: grid;
   grid-template-rows: 60px 1fr;
@@ -19,7 +24,36 @@ body,html{
   color: #041226;
   background: #f0f2f7;
 }
-
+.btn{
+  color: #444;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.5s ease-in;
+  background-color: #e6e6e6;
+  padding: 10px 16px;
+}
+.btn.btn-blue{
+  background-color: #0069be;
+  color: white;
+}
+.btn.btn-blue:hover{
+  background-color: #004d8b;
+  color: white;
+}
+.btn:hover{
+  box-shadow: 0 3px 10px rgba(74, 74, 74, 0.4);
+  color: #181818;
+  transition: 0.5s ease-out;
+  border: none;
+  background-color: #c8c8c8;
+}
 .app-wrapper-content {
   grid-area: c;
   background-color: #b0b0ff;

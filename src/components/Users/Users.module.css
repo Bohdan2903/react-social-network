@@ -1,6 +1,15 @@
 .userPhoto{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+    margin-right: 20px;
+}
+.userBlock{
+    margin-top: 20px;
+    padding: 0 20px 20px;
+    display: flex;
+    border-bottom: 1px solid;
 }
 .selectedPage{
     color: red;
@@ -15,4 +24,22 @@
 .preloader img {
     width: auto;
     height: 100%;
+}
+
+.userBody{
+    display: flex;
+    flex-direction: column;
+}
+.userBody div {
+    margin-bottom: 10px;
+}
+.userBody a {
+    color: #0069be;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: 0.5s ease-out;
+}
+.userBody a:hover{
+    color: rgba(9, 22, 42, 0.8);
+    transition: 0.5s ease-in;
 }

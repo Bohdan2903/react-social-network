@@ -1,5 +1,8 @@
 .header{
   grid-area: h;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #304159;
   box-shadow: 0 5px 15px 0 rgba(43, 61, 86, 0.4);
 }
@@ -9,7 +12,14 @@
 }
 .loginBlock{
   float: right;
+
+}
+
+.loginBlock:hover a {
+  color: #181818;
 }
 .loginBlock a {
-  color: white;
+  color: #4d4d6e;
+  font-weight: 600;
+  text-decoration: none;
 }
