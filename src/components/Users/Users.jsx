@@ -47,8 +47,7 @@ let Users = (props) => {
                                             }
                                         })
                                             .then(response => {
-                                                if(response.resultCode ===0){
-
+                                                if(response.data.resultCode === 0){
                                                     props.unfollow(user.id)
                                                 }
                                             });
@@ -63,8 +62,7 @@ let Users = (props) => {
                                             }
                                         })
                                             .then(response => {
-                                                if(response.resultCode ===0){
-
+                                                if(response.data.resultCode === 0){
                                                     props.follow(user.id)
                                                 }
                                             });
