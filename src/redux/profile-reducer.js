@@ -1,9 +1,10 @@
-import {usersAPI} from "../Api/Api";
+import {profileAPI, usersAPI} from "../Api/Api";
 import {toggleIsFetching} from "./auth-reducer";
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 const SET_USER_PROFILE= 'SET_USER_PROFILE';
+const SET_STATUS= 'SET_STATUS';
 
 let initialState = {
         posts: [
@@ -15,7 +16,8 @@ let initialState = {
             {id: 6, likeCount: 6, message: "Katya poka"},
         ],
         newPostText: 'newText',
-        profile: null
+        profile: null,
+    status:'',
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -47,6 +49,12 @@ const profileReducer = (state = initialState, action) => {
                 profile: action.profile
             };
         }
+        case SET_STATUS:{
+            return {
+                ...state,
+                status: action.status
+            };
+        }
 
         default: return state;
     }
@@ -70,13 +78,35 @@ export const setUserProfileAction = (profile) => {
         profile
     };
 };
+export const setStatus = (status) => {
+    return {
+        type: SET_STATUS,
+        status
+    };
+};
 export const getProfile = (userId) =>{
     return (dispatch) =>{
         dispatch(toggleIsFetching(true));
-        usersAPI.getProfile(userId).then((data) => {
+        profileAPI.getProfile(userId).then((data) => {
             dispatch(setUserProfileAction(data));
         });
     }
 }
+export const getStatus = (userId) =>{
+    return (dispatch) =>{
+        profileAPI.getStatus(userId).then((data) => {
+            dispatch(setStatus(data));
+        });
+    }
+}
+export const updateStatus = (status) =>{
+    return (dispatch) =>{
+        profileAPI.updateStatus(status).then((data) => {
+            if(data.resultCode ===0){
+                dispatch(setStatus(status));
+            }
 
+        });
+    }
+}
 export default profileReducer;

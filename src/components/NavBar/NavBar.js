@@ -32,29 +32,29 @@ const NavBar = () => {
     return (
         <nav className={s.nav}>
             <div className={`${s.item} ${s.active}`}>
-                <NavLink to="/Profile" activeClassName={s.active}>
+                <NavLink to="/profile" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faUserAlt} />Profile
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Dialogs" activeClassName={s.active}>
+                <NavLink to="/dialogs" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faEnvelope} /> Messages
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Users" activeClassName={s.active}>
+                <NavLink to="/users" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faUsers} /> Users</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/News" activeClassName={s.active}>
+                <NavLink to="/news" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faRss} /> News</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Music" activeClassName={s.active}>
+                <NavLink to="/music" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faMusic} /> Music</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/Settings" activeClassName={s.active}>
+                <NavLink to="/settings" activeClassName={s.active}>
                     <FontAwesomeIcon icon={faCog} /> Settings</NavLink>
             </div>
             <div className={s.item}>
